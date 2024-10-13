@@ -9,8 +9,8 @@ def encrypt(text, shift):
     for letter in text:
         if letter in alphabet:
             alphabet_index = alphabet.index(letter)
-            shifted_index = alphabet_index + shift
+            shifted_index = (alphabet_index + shift)  % len(alphabet)
             encrypted += alphabet[shifted_index]
-    print(encrypted)
+    print(f'Your excrytion is: {encrypted}')
     return encrypted
 encrypt(text, shift)
