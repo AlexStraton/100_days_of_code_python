@@ -14,3 +14,11 @@ def encrypt(text, shift):
     print(f'Your excrytion is: {encrypted}')
     return encrypted
 encrypt(text, shift)
+
+def decrypt(original_text, shift_amount):
+    decrypted_text = ''
+    for letter in original_text:
+        shifted_position = alphabet.index(letter) - shift_amount
+        decrypted_text += alphabet[shifted_position]
+    print(f"Here is the encoded result: {decrypted_text}")
+decrypt(original_text=text, shift_amount=shift)
